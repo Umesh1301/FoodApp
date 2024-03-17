@@ -1,5 +1,6 @@
 import { createSlice, current } from "@reduxjs/toolkit";
 import RestaurantsData from "../constants/RestaurantsData";
+import { Navigate } from "react-router-dom";
 
 const initialState = {
   restaurantId: null,
@@ -125,8 +126,10 @@ export const restaurantSlice = createSlice({
       }
     },
     CartCheckOutHandler:(state)=>{
+      console.log("working")
 state.cartProducts=[]
 state.cartItems=[]
+
     }
   },
 });

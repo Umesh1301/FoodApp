@@ -1,12 +1,11 @@
-import { Avatar, Box, Button, Card, Divider, Typography } from "@mui/material";
+import { Avatar, Button, Card, Divider, Typography } from "@mui/material";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   CartCheckOutHandler,
   CartDeleteItemHandler,
   cartAddedItemHandler,
-  increment,
 } from "../store/restaurantSlice";
 
 const FoodCart = () => {
@@ -14,7 +13,7 @@ const FoodCart = () => {
   const dispatch = useDispatch();
   const cartProduct = useSelector((state) => state.restaurant.cartProducts);
 
-  const restID=useSelector((state)=> state.restaurant.restaurantId)
+  const restID = useSelector((state) => state.restaurant.restaurantId);
 
   console.log(restID);
 
@@ -41,7 +40,6 @@ const FoodCart = () => {
 
     return TotalCartAmount;
   };
- 
 
   return (
     <div
@@ -78,7 +76,9 @@ const FoodCart = () => {
             <div>
               <Button
                 variant="contained"
-                onClick={() => dispatch(CartCheckOutHandler())}
+                onClick={() => {
+                  dispatch(CartCheckOutHandler()), navigate("/cartCheckout");
+                }}
                 sx={{ marginLeft: "40px" }}
               >
                 Check Out

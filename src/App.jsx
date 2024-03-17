@@ -1,13 +1,12 @@
 import FirstWebPage from "./component/FirstWebPage";
 
 import { Route, Routes } from "react-router-dom";
-import CartCheckOut from "./component/CartCheckOut";
-import CentralPage from "./component/HeaderOfFoodApp";
+import CheckoutCart from "./component/CheckoutCart";
 import FoodCart from "./component/FoodCart";
+import HeaderOfFoodApp from "./component/HeaderOfFoodApp";
 import RestaurantFoodItemList from "./component/RestaurantFoodItemList";
 import SignIn from "./credentials/SignIn";
 import SignUp from "./credentials/SignUp";
-import HeaderOfFoodApp from "./component/HeaderOfFoodApp";
 
 function App() {
   return (
@@ -18,7 +17,7 @@ function App() {
           path="/restaurantFoodItemList/:id"
           element={<RestaurantFoodItemList />}
         ></Route>
-        <Route path="/cartCheckout" element={<CartCheckOut />}></Route>
+        <Route path="/cartCheckout" element={<CheckoutCart />}></Route>
         <Route path="/foodcart" element={<FoodCart />} />
         <Route path="/" element={<FirstWebPage />}></Route>
         <Route path="/signUp" element={<SignUp />}></Route>

@@ -2,7 +2,7 @@ import { Card } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const CartCheckOut = () => {
+const CheckoutCart = () => {
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <Card
@@ -24,4 +24,4 @@ const CartCheckOut = () => {
   );
 };
 
-export default CartCheckOut;
+export default CheckoutCart;
